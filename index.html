@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AOA Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Amplitude of Accommodation Calculator</h1>
+      <p>Calculate minimum, average, and maximum AOA for any age from 0 to 80 using Hofstetter's formulas.</p>
+    </header>
+
+    <section class="calculator-card">
+      <label for="age">Enter age:</label>
+      <input id="age" type="number" min="0" max="80" value="30" />
+      <button id="calculate">Calculate</button>
+      <p id="error" class="error hidden"></p>
+
+      <div class="results hidden" id="results">
+        <h2>Results</h2>
+        <div class="result-item">
+          <span>Minimum AOA</span>
+          <strong id="minimum">--</strong>
+        </div>
+        <div class="result-item">
+          <span>Average AOA</span>
+          <strong id="average">--</strong>
+        </div>
+        <div class="result-item">
+          <span>Maximum AOA</span>
+          <strong id="maximum">--</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-card">
+      <h2>Hofstetter's Formulas</h2>
+      <ul>
+        <li>Minimum AOA = 15 − 0.25 × age</li>
+        <li>Average AOA = 18.5 − 0.3 × age</li>
+        <li>Maximum AOA = 25 − 0.4 × age</li>
+      </ul>
+      <p>Enter an age between 0 and 80 to see the calculated amplitude of accommodation.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
